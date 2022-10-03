@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Price Prediction</title>
+</head>
+<body>
+<div>
+<h1>Price Prediction</h1>
+
+
+
+<form action="{{url_for('predict')}}" method="post">
+<input type="number" name="Avg. Area Income" placeholder="Avg. Area Income of the house" required="required"/>
+<input type="number" name="Avg. Area House Age" min="0" max="1" placeholder="Avg. Area House Age" required="required"/>
+<input type="number" name="Avg. Area Number of Rooms" min="0" max="2" placeholder="Avg. Area Number of Rooms of the house" required="required"/>
+<input type="number" name="Avg. Area Number of Bedrooms" min="1" max="2" placeholder="Avg. Area Number of Bedrooms of the house" required="required"/>
+<input type="number" name="Area Population	" placeholder="Area Population" required="required"/>
+
+
+
+<button type="submit" class="btn btn-success">Price</button>
+
+
+
+</form>
+
+
+
+<br>
+
+
+
+{{ prediction_text}}
+</div>
+    
+</body>
+</html>
